@@ -1,0 +1,112 @@
+# 代码风格，大括号独占一行。
+# -A1
+--style=allman
+
+# 将“do-while”语句的闭合“while”附加到闭合括号上。
+# -xV
+--attach-closing-while
+
+# 将返回类型附加到函数名称上。两个选项分别是函数定义（-xf），以及 函数声明或签名（-xh）。
+# -xf
+--attach-return-type
+# -xh
+--attach-return-type-decl
+
+# 每个缩进使用 # 个空格进行缩进
+# -s4
+--indent=spaces=4
+
+# 缩进“switch”块，使“case X：”语句在开关块中缩进。整个case代码块有缩进。
+# -S
+--indent-switches
+
+# 在命名空间块中添加额外的缩进。
+# -N
+--indent-namespaces
+
+# 以反斜杠结尾的多行预处理器定义缩进。
+# -w
+--indent-preproc-define
+
+# 将预处理器条件语句进行缩进到与源代码相同的层级。
+# -xw
+--indent-preproc-cond
+
+# 从第一列开始，注释进行缩进。
+# -Y
+--indent-col1-comments
+
+# 设置当一个头部由多行组成时，添加的最小缩进。 0 - 无最小缩进。这些行将与前一行的paren对齐。
+# -m0
+--min-conditional-indent=0
+
+# 将最大#空格设置为缩进续行。#表示列数，且不得小于40或超过120。
+# -M40
+--max-continuation-indent=40
+
+# 如果代码超过#字符，max-code-length选项会断开一行。有效数值是50到200。
+# -xC180
+# -xL
+--max-code-length=180
+--break-after-logical
+
+# 在头部块周围填充空行（例如 'if'， 'for'， 'while' 等）。
+# -f
+--break-blocks
+
+# 在操作符周围插入空间填充。
+# -p
+--pad-oper
+
+# 逗号后插入空格填充。
+# -xg
+--pad-comma
+
+# 在包含指令后插入空格填充，并去除多余的空白。
+--pad-include
+
+# 在头部之间插入空格填充（例如 'if'， 'for'， 'while' 等）
+# -H
+--pad-header
+
+# 去除内外部副板周围多余的空格。
+# -U
+--unpad-paren
+
+# 拆除内外方方括号周围的空格。
+--unpad-brackets
+
+# 消除函数和方法中不必要的空行。
+# -xe
+--delete-empty-lines
+
+# 去除多余的空白
+--squeeze-ws
+
+# 将指针或引用算符（*、&、或^）附加到变量类型（左）或变量名（右）上， 或者将其置于类型和名称之间（中间）。
+# -k3
+--align-pointer=name
+--align-reference=name
+
+# 在无加固的单行条件语句上加大括号（例如 'if'， 'for'， 'while' 等）。
+# -j
+--add-braces
+
+# 将制表符转换为非缩进部分的空格。
+# -c
+--convert-tabs
+
+# 显示说明缩进类型为C语言
+--mode=c
+
+# 不要保留原始文件的备份。原始文件格式化后会被清除。
+# -n
+--suffix=none
+
+# 强制使用指定的线尾样式。有效的选项有 windows（CRLF）、linux（LF）和macold（CR）。
+# -z1
+--lineend=windows
+
+# 安静显示模式。
+# -q
+--quiet
